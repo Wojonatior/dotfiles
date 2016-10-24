@@ -27,9 +27,8 @@ set history=200
 
 "Colors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set background=dark
-  colorscheme CustomSolarized
   syntax enable
+  colorscheme CustomSolarized
 
 "Spaces And Tabs
   set expandtab "Tabs are spaces
@@ -46,7 +45,7 @@ set history=200
   set showmatch "shows matching paren
   set autoindent "always auto-indent
   set wrap "wrap lines
-  set guifont=Menlo\ for\ Powerline
+  set guifont=Meslo\ for\ Powerline
   set ambiwidth=double "allows for double-width characters
 
   "Change where splits open
@@ -86,7 +85,7 @@ set history=200
     let g:ctrlp_use_caching = 0
   endif
 
-  "ags configuratiov
+  "ags configuration
     let g:ags_agexe = 'ag'
     let g:ags_agcontext = 3
     let g:ags_enable_async = 1
@@ -115,7 +114,9 @@ set history=200
     nnoremap <C-K> <C-W>k
     nnoremap <C-L> <C-W>l
     nnoremap <C-H> <C-W>h
-  map Y y$
+
+  map Y y$ " Capital Y now acts like D and C, where it yanks until end of line
+  map <CR> o<esc> " Enter in command mode will enter a new line and stay in command mode
 
 "Launch Config
 "Tmux Config

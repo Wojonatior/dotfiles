@@ -1,5 +1,5 @@
 # Load up the antigen source
-source /usr/local/bin/antigen/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 
@@ -7,7 +7,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Wojonatior/.oh-my-zsh
+export ZSH=/Users/wojo/.oh-my-zsh
+export DEFAULT_USER=wojo
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,7 +62,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Wojonatior/anaconda/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='vim'
 # export MANPATH="/usr/local/man:$MANPATH"
 

@@ -64,65 +64,65 @@ if &background == "light"
     hi Identifier gui=NONE guifg=NONE guibg=NONE
     hi PreProc gui=NONE guifg=NONE guibg=NONE
 elseif &background == "dark"
-    hi Boolean gui=NONE guifg=#738a00 guibg=NONE
+    hi Boolean gui=NONE guifg=#209287 guibg=NONE
     hi ColorColumn gui=NONE guifg=NONE guibg=#1a1a1a
-    hi Comment gui=NONE guifg=#e9e3c9 guibg=NONE
+    hi Comment gui=NONE guifg=#fdf6dd guibg=#082b35
     hi Conceal gui=NONE guifg=#808080 guibg=NONE
-    hi Conditional gui=NONE guifg=#bc3810 guibg=NONE
-    hi Constant gui=NONE guifg=#258e83 guibg=NONE
-    hi Cursor gui=reverse guifg=#839191 guibg=#0d2935
-    hi CursorColumn gui=NONE guifg=NONE guibg=#07212c
-    hi CursorLine gui=NONE guifg=NONE guibg=#0d2935
-    hi CursorLineNr gui=NONE guifg=#839191 guibg=#495c65
-    hi DiffAdd gui=NONE guifg=NONE guibg=#0e6902
-    hi DiffChange gui=NONE guifg=NONE guibg=#0d2935
-    hi DiffDelete gui=NONE guifg=NONE guibg=#800000
-    hi DiffText gui=NONE guifg=NONE guibg=#610002
-    hi Directory gui=NONE guifg=#cc1e1e guibg=NONE
-    hi Error gui=NONE guifg=NONE guibg=#260808
-    hi ErrorMsg gui=NONE guifg=#cc1e1e guibg=#0d2935
-    hi FoldColumn gui=NONE guifg=#839191 guibg=NONE
-    hi Folded gui=NONE guifg=#839191 guibg=NONE
+    hi Conditional gui=NONE guifg=#ca1670 guibg=NONE
+    hi Constant gui=NONE guifg=#808080 guibg=NONE
+    hi Cursor gui=reverse guifg=NONE guibg=NONE
+    hi CursorColumn gui=NONE guifg=NONE guibg=#082b35
+    hi CursorLine gui=underline guifg=NONE guibg=#002029
+    hi CursorLineNr gui=NONE guifg=#839191 guibg=NONE
+    hi DiffAdd gui=NONE guifg=#082b35 guibg=#708a00
+    hi DiffChange gui=NONE guifg=NONE guibg=#002029
+    hi DiffDelete gui=NONE guifg=#002029 guibg=#d2191f
+    hi DiffText gui=NONE guifg=#e9e2c8 guibg=#465b62
+    hi Directory gui=NONE guifg=#d2191f guibg=NONE
+    hi Error gui=NONE guifg=NONE guibg=#d2191f
+    hi ErrorMsg gui=NONE guifg=#d2191f guibg=#082b35
+    hi FoldColumn gui=NONE guifg=#e9e2c8 guibg=NONE
+    hi Folded gui=NONE guifg=#a87900 guibg=#002029
     hi Ignore gui=NONE guifg=NONE guibg=NONE
-    hi IncSearch gui=NONE guifg=NONE guibg=#333333
-    hi LineNr gui=NONE guifg=#495c65 guibg=#0d2a35
-    hi MatchParen gui=NONE guifg=#0d2935 guibg=#718284
-    hi ModeMsg gui=NONE guifg=#738a00 guibg=#07212c
-    hi MoreMsg gui=NONE guifg=#2f9287 guibg=NONE
-    hi NonText gui=NONE guifg=#495c65 guibg=#07212c
-    hi Normal gui=NONE guifg=#718284 guibg=#07212c
-    hi Number gui=NONE guifg=#cc1e1e guibg=NONE
-    hi Pmenu gui=NONE guifg=NONE guibg=#e9e3c9
-    hi PmenuSbar gui=NONE guifg=#fcf5d9 guibg=#07212c
-    hi PmenuSel gui=NONE guifg=#e9e3c9 guibg=#495c65
-    hi PmenuThumb gui=NONE guifg=#2772ce guibg=#2772ce
+    hi IncSearch gui=underline guifg=#d2191f guibg=#082b35
+    hi LineNr gui=NONE guifg=#839191 guibg=#002029
+    hi MatchParen gui=NONE guifg=#002029 guibg=#fdf6dd
+    hi ModeMsg gui=NONE guifg=#708a00 guibg=NONE
+    hi MoreMsg gui=NONE guifg=#1a76cb guibg=NONE
+    hi NonText gui=NONE guifg=#d2191f guibg=NONE
+    hi Normal gui=NONE guifg=#839191 guibg=#082b35
+    hi Number gui=NONE guifg=#708a00 guibg=NONE
+    hi Pmenu gui=NONE guifg=#839191 guibg=#002029
+    hi PmenuSbar gui=NONE guifg=#465b62 guibg=#465b62
+    hi PmenuSel gui=NONE guifg=#e9e2c8 guibg=#082b35
+    hi PmenuThumb gui=NONE guifg=NONE guibg=#1a76cb
     hi Question gui=NONE guifg=NONE guibg=NONE
-    hi Search gui=NONE guifg=NONE guibg=#262626
-    hi SignColumn gui=NONE guifg=#616161 guibg=#07212c
-    hi Special gui=NONE guifg=#d01b24 guibg=NONE
+    hi Search gui=underline guifg=#d2191f guibg=#082b35
+    hi SignColumn gui=NONE guifg=#fdf6dd guibg=#082b35
+    hi Special gui=NONE guifg=#209287 guibg=NONE
     hi SpecialKey gui=NONE guifg=#616161 guibg=NONE
-    hi SpellBad gui=undercurl guisp=NONE guifg=NONE guibg=#cc1e1e
-    hi SpellCap gui=undercurl guisp=NONE guifg=NONE guibg=NONE
-    hi SpellLocal gui=undercurl guisp=NONE guifg=NONE guibg=#738a00
-    hi SpellRare gui=undercurl guisp=NONE guifg=NONE guibg=#c01b73
-    hi Statement gui=NONE guifg=#2772ce guibg=NONE
-    hi StatusLine gui=NONE guifg=#718284 guibg=#0d2935
-    hi StatusLineNC gui=NONE guifg=#495c65 guibg=#0d2935
-    hi StorageClass gui=NONE guifg=#a37a00 guibg=NONE
-    hi String gui=NONE guifg=#2f9287 guibg=NONE
-    hi TabLine gui=NONE guifg=#718284 guibg=#0c2832
-    hi TabLineFill gui=NONE guifg=#052029 guibg=#051f29
-    hi TabLineSel gui=NONE guifg=#718284 guibg=#e8e2c9
-    hi Title gui=NONE guifg=#e9e3c9 guibg=NONE
-    hi Todo gui=underline guifg=#c01b73 guibg=NONE
-    hi Type gui=NONE guifg=#738a00 guibg=NONE
+    hi SpellBad gui=undercurl guisp=NONE guifg=#e9e2c8 guibg=#d2191f
+    hi SpellCap gui=undercurl guisp=NONE guifg=#e9e2c8 guibg=NONE
+    hi SpellLocal gui=undercurl guisp=NONE guifg=#e9e2c8 guibg=#708a00
+    hi SpellRare gui=undercurl guisp=NONE guifg=#082b35 guibg=#e9e2c8
+    hi Statement gui=NONE guifg=#1a76cb guibg=NONE
+    hi StatusLine gui=NONE guifg=#1a76cb guibg=#002029
+    hi StatusLineNC gui=NONE guifg=#707070 guibg=#262626
+    hi StorageClass gui=NONE guifg=#a87900 guibg=NONE
+    hi String gui=NONE guifg=#d2191f guibg=NONE
+    hi TabLine gui=NONE guifg=#839191 guibg=#002029
+    hi TabLineFill gui=NONE guifg=NONE guibg=#002029
+    hi TabLineSel gui=NONE guifg=#1a76cb guibg=#082b35
+    hi Title gui=NONE guifg=#fdf6dd guibg=NONE
+    hi Todo gui=reverse guifg=#d2191f guibg=#e9e2c8
+    hi Type gui=NONE guifg=#708a00 guibg=NONE
     hi Underlined gui=NONE guifg=NONE guibg=NONE
-    hi VertSplit gui=standout guifg=#0d2935 guibg=#0d2935
-    hi Visual gui=NONE guifg=NONE guibg=#e9e3c9
+    hi VertSplit gui=NONE guifg=#333333 guibg=NONE
+    hi Visual gui=NONE guifg=NONE guibg=#fdf6dd
     hi VisualNOS gui=NONE guifg=NONE guibg=NONE
-    hi WarningMsg gui=NONE guifg=#07212c guibg=#cc1e1e
-    hi WildMenu gui=NONE guifg=#718284 guibg=#fcf5d9
+    hi WarningMsg gui=NONE guifg=#c03502 guibg=#082b35
+    hi WildMenu gui=NONE guifg=#209287 guibg=#082b35
     hi lCursor gui=NONE guifg=NONE guibg=NONE
-    hi Identifier gui=NONE guifg=#1f6ebd guibg=NONE
-    hi PreProc gui=NONE guifg=#2f9287 guibg=NONE
+    hi Identifier gui=NONE guifg=#ca1670 guibg=NONE
+    hi PreProc gui=NONE guifg=#708a00 guibg=NONE
 endif

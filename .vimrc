@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+:set nocompatible              " be iMproved, required
 
 "Custom Leader
 let mapleader="," "leader is a comma
@@ -10,24 +10,26 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 endif
 
 call plug#begin('~/.vim/bundle')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-eunuch'
-Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
-Plug 'raimondi/delimitmate'
-Plug 'tpope/vim-fugitive'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'tpope/vim-eunuch'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'scrooloose/nerdtree'
+"Plug 'editorconfig/editorconfig-vim'
+"Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
+"Plug 'raimondi/delimitmate'
+"Plug 'tpope/vim-fugitive'
+"Plug 'rking/ag.vim'
+"Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
-set history=200
+"set history=200
 
-"Colors
+""Colors
+  set termguicolors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  syntax enable
+  set background=dark
+  "syntax enable
   colorscheme CustomSolarized
 
 "Spaces And Tabs

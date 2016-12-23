@@ -7,7 +7,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/wojo/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 export DEFAULT_USER=wojo
 
 # Set name of the theme to load.
@@ -93,7 +93,6 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(thefuck --alias fuck)"
 alias vim="nvim"
 function chpwd() {ls}
-alias eflex="cd ~/Eflex\ Work/eflex"
 alias git pprint="git log --graph --all --decorate"
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 alias ag='ag --path-to-agignore ~/.agignore'

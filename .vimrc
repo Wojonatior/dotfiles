@@ -10,17 +10,17 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 endif
 
 call plug#begin('~/.vim/bundle')
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'tpope/vim-eunuch'
-"Plug 'sheerun/vim-polyglot'
-"Plug 'scrooloose/nerdtree'
-"Plug 'editorconfig/editorconfig-vim'
-"Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
-"Plug 'raimondi/delimitmate'
-"Plug 'tpope/vim-fugitive'
-"Plug 'rking/ag.vim'
-"Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-eunuch'
+Plug 'sheerun/vim-polyglot'
+Plug 'scrooloose/nerdtree'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
+Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-fugitive'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 "set history=200
@@ -53,10 +53,6 @@ call plug#end()
   "Change where splits open
     set splitbelow 
     set splitright
-
-  "Recolors highlights
-    :highlight Search ctermbg=black ctermfg=yellow term=underline
-    :highlight Search guibg=black guifg=yellow term=underline
   
   "Airline Config
     let g:airline_powerline_fonts = 1 "adds powerline chars to dict

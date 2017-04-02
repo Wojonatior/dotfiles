@@ -1,11 +1,12 @@
 ### Antigen
+# Antigen is currently unusabley slow, so I've stopped using it for the time being
 # Load up the antigen source
-source $(brew --prefix)/share/antigen/antigen.zsh
+#source $(brew --prefix)/share/antigen/antigen.zsh
 
-antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Finish antigen package loading
-antigen apply
+## Finish antigen package loading
+#antigen apply
 
 
 # Path to your oh-my-zsh installation.

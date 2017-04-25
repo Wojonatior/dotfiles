@@ -187,6 +187,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
+  # This is the juicy line that actually shortens my prompt
   prompt_segment blue black '%(5~|%-1~/.../%3~|%4~)'
 }
 

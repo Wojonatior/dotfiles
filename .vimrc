@@ -13,6 +13,8 @@ call plug#begin('~/.vim/bundle')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-eunuch'
+Plug 'rhysd/vim-crystal'
+Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
@@ -65,7 +67,7 @@ call plug#end()
   set incsearch "searches as each characer is entered
   set hlsearch "highlights matches
   "turns off search highlights
-  nnoremap <leader><space> :nohlsearch<CR>
+  nnoremap (<leader><space>) :nohlsearch<CR>
  
   "CtrlP Settings
     let g:ctrlp_map = '<c-p>'

@@ -12,14 +12,18 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export DEFAULT_USER=wojo
+ZSH_CUSTOM=$HOME/.zsh_custom
 
 # Set name of the theme to load.
-ZSH_THEME="agnoster"
+ZSH_THEME="modified-agnoster"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git)
 
 ### User configuration
+
+#Source API keys
+source ~/.api_keys
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then

@@ -69,7 +69,7 @@ elseif &background == "dark"
     hi Comment gui=NONE guifg=#fdf6dd guibg=#082b35
     hi Conceal gui=NONE guifg=#808080 guibg=NONE
     hi Conditional gui=NONE guifg=#ca1670 guibg=NONE
-    hi Constant gui=NONE guifg=#808080 guibg=NONE
+    hi Constant gui=NONE guifg=#5a58bb guibg=NONE
     hi Cursor gui=reverse guifg=NONE guibg=NONE
     hi CursorColumn gui=NONE guifg=NONE guibg=#082b35
     hi CursorLine gui=underline guifg=NONE guibg=#002029
@@ -107,7 +107,7 @@ elseif &background == "dark"
     hi SpellRare gui=undercurl guisp=NONE guifg=#082b35 guibg=#e9e2c8
     hi Statement gui=NONE guifg=#1a76cb guibg=NONE
     hi StatusLine gui=NONE guifg=#1a76cb guibg=#002029
-    hi StatusLineNC gui=NONE guifg=#707070 guibg=#262626
+    hi StatusLineNC gui=NONE guifg=#707070 guibg=#002029
     hi StorageClass gui=NONE guifg=#a87900 guibg=NONE
     hi String gui=NONE guifg=#d2191f guibg=NONE
     hi TabLine gui=NONE guifg=#839191 guibg=#002029
@@ -117,7 +117,7 @@ elseif &background == "dark"
     hi Todo gui=reverse guifg=#d2191f guibg=#e9e2c8
     hi Type gui=NONE guifg=#708a00 guibg=NONE
     hi Underlined gui=NONE guifg=NONE guibg=NONE
-    hi VertSplit gui=NONE guifg=#333333 guibg=NONE
+    hi VertSplit gui=NONE guifg=#e9e2c8 guibg=NONE
     hi Visual gui=NONE guifg=NONE guibg=#fdf6dd
     hi VisualNOS gui=NONE guifg=NONE guibg=NONE
     hi WarningMsg gui=NONE guifg=#c03502 guibg=#082b35

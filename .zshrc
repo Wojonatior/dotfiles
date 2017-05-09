@@ -32,7 +32,7 @@ source ~/.api_keys
    export EDITOR='nvim'
  fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export UPDATE_ZSH_DAYS=1
 COMPLETION_WAITING_DOTS="true"
 
@@ -66,3 +66,6 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 eval $(/usr/libexec/path_helper -s)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

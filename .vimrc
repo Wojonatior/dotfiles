@@ -51,6 +51,7 @@ call plug#end()
   set wrap "wrap lines
   set guifont=Meslo\ for\ Powerline
   set ambiwidth=double "allows for double-width characters
+  set mouse=a "Allows for mouse scrolling to work correctly
 
   "Change where splits open
     set splitbelow 

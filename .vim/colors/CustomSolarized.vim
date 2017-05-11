@@ -124,5 +124,5 @@ elseif &background == "dark"
     hi WildMenu gui=NONE guifg=#209287 guibg=#082b35
     hi lCursor gui=NONE guifg=NONE guibg=NONE
     hi Identifier gui=NONE guifg=#ca1670 guibg=NONE
-    hi PreProc gui=NONE guifg=#708a00 guibg=NONE
+    hi PreProc gui=NONE guifg=#209287 guibg=NONE
 endif

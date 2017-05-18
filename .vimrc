@@ -82,9 +82,10 @@ call plug#end()
     "use ag in ctrlp
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-    "disable ctrlp cavhing when ag is in use
+    "disable ctrlp cahing when ag is in use
     let g:ctrlp_use_caching = 0
   endif
+
 
   "ags configuration
     let g:ags_agexe = 'ag'

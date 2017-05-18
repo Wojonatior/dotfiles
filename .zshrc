@@ -45,7 +45,6 @@ eval "$(thefuck --alias fuck)"
 alias vim="nvim"
 function chpwd() {ls}
 alias git pprint="git log --graph --all --decorate"
-alias ag='ag --path-to-agignore ~/.agignore'
 alias hotgulp="coffee -c gulpfile.coffee && gulp"
 alias delet="rm -rf"
 

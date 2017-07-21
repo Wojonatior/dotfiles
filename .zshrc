@@ -47,6 +47,7 @@ function chpwd() {ls}
 alias git pprint="git log --graph --all --decorate"
 alias hotgulp="coffee -c gulpfile.coffee && gulp"
 alias delet="rm -rf"
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 # Backing up of dotfiles/configuration
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

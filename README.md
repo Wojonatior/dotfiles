@@ -22,7 +22,7 @@ config commit -m "added .vimrc
 ### Clone to new machine
 Cloning to a non-empty home directly will fail. The following commands provide a solution to that problem by cloning to a temporary directory first and then moving the files.
 ```
-git clone --separate-git-dir=$HOME/.myconf /path/to/repo $HOME/myconf-tmp
+git clone --separate-git-dir=$HOME/.myconf https://github.com/Wojonatior/dotfiles.git $HOME/myconf-tmp
 cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
 rm -r ~/myconf-tmp/
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

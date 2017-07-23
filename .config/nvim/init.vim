@@ -1,15 +1,16 @@
 :set nocompatible              " be iMproved, required
+let $XDG_DATA_HOME="~/.config/nvim/autoload"
 
 "Custom Leader
 let mapleader="," "leader is a comma
 
 " Load vim-plug
-if empty(glob("~/.vim/autoload/plug.vim"))
+if empty(glob("~/.config/nvim/autoload/plug.vim"))
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim/bundle/')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-eunuch'

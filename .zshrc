@@ -39,9 +39,8 @@ COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 
 ### Aliases
-
+alias backbrew="brew leaves > ~/.config/brew/packages; echo '\ncasks:\n' >> ~/.config/brew/packages; brew cask list -1 >> ~/.config/brew/packages;"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(thefuck --alias fuck)"
 alias vim="nvim"
 function chpwd() {ls}
 alias git pprint="git log --graph --all --decorate"
@@ -69,3 +68,6 @@ eval $(/usr/libexec/path_helper -s)
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Run a backup of brew pacakges every time a terminal is loaded
+backbrew

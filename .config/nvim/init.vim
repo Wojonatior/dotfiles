@@ -24,16 +24,17 @@ Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'janko-m/vim-test'
+Plug 'jelera/vim-javascript-syntax'
 call plug#end()
-
-"set history=200
 
 ""Colors
   set termguicolors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   set background=dark
-  "syntax enable
+  syntax enable
   colorscheme CustomSolarized
+  let g:polyglot_disabled = ['javascript']
 
 "Spaces And Tabs
   set expandtab "Tabs are spaces
@@ -105,11 +106,12 @@ call plug#end()
 "Custom Movements
 
 "Custom Commands
-  ":ev will open my vimrc for editing
-  :nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-  ":sv will reload my evaluate my vimrc immediatly
+  :nnoremap <leader>ev :tabe $MYVIMRC<CR>
   :nnoremap <leader>sv :source $MYVIMRC<CR>
   :nnoremap <leader>nt :NERDTreeToggle<CR>
+  "Vim test commands
+  nmap <silent> <leader>t :TestNearest<CR>
+  nmap <silent> <leader>T :TestFile<CR>
   "jk is escape
   "inoremap jk <esc> 
   "Split movement rebinds

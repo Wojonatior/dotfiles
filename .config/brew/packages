@@ -6,6 +6,7 @@ gnupg
 libyaml
 neovim
 node
+phantomjs
 postgresql
 pyenv
 python3

@@ -94,7 +94,13 @@ call plug#end()
     highlight SyntasticWarningSign guifg=#073642 guibg=#073642
 
   "Deoplete Config
+    inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
     let g:deoplete#enable_at_startup = 1
+    if !exists('g:deoplete#omni#input_patterns')
+      let g:deoplete#omni#input_patterns = {}
+    endif
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
   " Use deoplete.
     let g:tern_request_timeout = 1
     let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete

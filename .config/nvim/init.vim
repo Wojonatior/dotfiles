@@ -26,6 +26,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'janko-m/vim-test'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 ""Colors
@@ -34,7 +35,6 @@ call plug#end()
   set background=dark
   syntax enable
   colorscheme CustomSolarized
-  let g:polyglot_disabled = ['javascript']
 
 "Spaces And Tabs
   set expandtab "Tabs are spaces
@@ -55,6 +55,13 @@ call plug#end()
   set ambiwidth=double "allows for double-width characters
   set mouse=a "Allows for mouse scrolling to work correctly
 
+  "Disable the polyglot syntax highlighting for js
+  let test#strategy = "dispatch"
+
+
+  "Change the type of split that opens for vimtest
+    let test#strategy = "neovim"
+
   "Change where splits open
     set splitbelow 
     set splitright
@@ -65,6 +72,23 @@ call plug#end()
     let g:airline_theme='solarized'
     let g:solarized_visibility = "high"
     let g:solarized_contrast = "high"
+
+  "Syntastic Config
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 2
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_javascript_checkers=['eslint']
+    let g:syntastic_warning_symbol = "🙆"
+    let g:syntastic_style_warning_symbol = "🙆"
+    let g:syntastic_error_symbol = "🙅"
+    let g:syntastic_style_error_symbol = "🙅"
+    highlight SyntasticErrorSign guifg=#073642 guibg=#073642
+    highlight SyntasticWarningSign guifg=#073642 guibg=#073642
 
 "Searching
   set incsearch "searches as each characer is entered

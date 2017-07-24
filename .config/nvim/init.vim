@@ -118,8 +118,8 @@ call plug#end()
     nnoremap <C-L> <C-W>l
     nnoremap <C-H> <C-W>h
 
-  map Y y$ " Capital Y now acts like D and C, where it yanks until end of line
-  map <CR> o<esc> " Enter in command mode will enter a new line and stay in command mode
+  "Capital Y now acts like D and C, where it yanks until end of line
+  map Y y$ 
 
 "Launch Config
 "Tmux Config

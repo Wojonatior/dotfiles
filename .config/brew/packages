@@ -2,6 +2,8 @@ cask
 coreutils
 diff-so-fancy
 emacs
+gnupg
+libyaml
 neovim
 node
 postgresql
@@ -21,6 +23,7 @@ discord
 font-hack
 google-chrome
 iterm2
+magicprefs
 postico
 postman
 sketch

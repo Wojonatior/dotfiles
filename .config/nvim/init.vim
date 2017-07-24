@@ -27,6 +27,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'janko-m/vim-test'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
 call plug#end()
 
 ""Colors
@@ -89,6 +92,19 @@ call plug#end()
     let g:syntastic_style_error_symbol = "🙅"
     highlight SyntasticErrorSign guifg=#073642 guibg=#073642
     highlight SyntasticWarningSign guifg=#073642 guibg=#073642
+
+  "Deoplete Config
+    let g:deoplete#enable_at_startup = 1
+  " Use deoplete.
+    let g:tern_request_timeout = 1
+    let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+
+    "Add extra filetypes
+    let g:tern#filetypes = [
+                    \ 'jsx',
+                    \ 'javascript.jsx',
+                    \ ]
+
 
 "Searching
   set incsearch "searches as each characer is entered

@@ -5,3 +5,5 @@ log/
 .tern-port
 # vi
 *~
+log.rb
+.byebug_history

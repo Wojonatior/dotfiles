@@ -59,7 +59,6 @@ call plug#end()
   set mouse=a "Allows for mouse scrolling to work correctly
 
   "Disable the polyglot syntax highlighting for js
-  let test#strategy = "dispatch"
 
 
   "Change the type of split that opens for vimtest
@@ -71,6 +70,7 @@ call plug#end()
   
   "Airline Config
     let g:airline_powerline_fonts = 1 "adds powerline chars to dict
+    let g:airline#extensions#whitespace#mixed_indent_algo = 1
     let g:airline_solarized_normal_green = 1
     let g:airline_theme='solarized'
     let g:solarized_visibility = "high"
@@ -158,6 +158,7 @@ call plug#end()
   "Vim test commands
   nmap <silent> <leader>t :TestNearest<CR>
   nmap <silent> <leader>T :TestFile<CR>
+  nmap <silent> <leader>l :TestLast<CR>
   "jk is escape
   "inoremap jk <esc> 
   "Split movement rebinds
@@ -168,6 +169,7 @@ call plug#end()
 
   "Capital Y now acts like D and C, where it yanks until end of line
   map Y y$ 
+  tnoremap <Esc> <C-\><C-n>
 
 "Launch Config
 "Tmux Config

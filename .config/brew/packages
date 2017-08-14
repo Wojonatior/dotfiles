@@ -2,10 +2,11 @@ cask
 coreutils
 diff-so-fancy
 emacs
+git
 gnupg
+heroku
 libyaml
 neovim
-node
 phantomjs
 postgresql
 pyenv
@@ -30,6 +31,7 @@ iterm2
 magicprefs
 postico
 postman
+recordit
 sketch
 slack
 spotify

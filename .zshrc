@@ -40,13 +40,13 @@ source $ZSH/oh-my-zsh.sh
 
 ### Aliases
 alias backbrew="brew leaves > ~/.config/brew/packages; echo '\ncasks:\n' >> ~/.config/brew/packages; brew cask list -1 >> ~/.config/brew/packages;"
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 function chpwd() {ls}
 alias git pprint="git log --graph --all --decorate"
 alias hotgulp="coffee -c gulpfile.coffee && gulp"
 alias delet="rm -rf"
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.config/nvim/init.vim'
 

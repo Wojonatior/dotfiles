@@ -45,17 +45,15 @@ call plug#end()
   set shiftwidth=2
 
 "UI Config
-  set number "show line numbers
-  set showcmd "show last command
-  set cursorline "highlights current line
-  filetype indent on "loads indentation based on language
-  set wildmenu "visual autocomplete
-  set lazyredraw "minimizes the number of redraws
+  set number
+  set cursorline
+  set lazyredraw
+  set autoindent
+  set wrap
+  set guifont=Hack
   set showmatch "shows matching paren
-  set autoindent "always auto-indent
-  set wrap "wrap lines
-  set guifont=Meslo\ for\ Powerline
-  set ambiwidth=double "allows for double-width characters
+  filetype indent on "loads indentation based on language
+  set showcmd "show last command
   set mouse=a "Allows for mouse scrolling to work correctly
 
   "Disable the polyglot syntax highlighting for js

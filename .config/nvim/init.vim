@@ -35,9 +35,9 @@ call plug#end()
 ""Colors
   set termguicolors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set background=dark
+  set background=light
   syntax enable
-  colorscheme CustomSolarized
+  colorscheme PaperColor
 
 "Spaces And Tabs
   set expandtab "Tabs are spaces
@@ -70,7 +70,7 @@ call plug#end()
     let g:airline_powerline_fonts = 1 "adds powerline chars to dict
     let g:airline#extensions#whitespace#mixed_indent_algo = 1
     let g:airline_solarized_normal_green = 1
-    let g:airline_theme='solarized'
+    let g:airline_theme='papercolor'
     let g:solarized_visibility = "high"
     let g:solarized_contrast = "high"
 

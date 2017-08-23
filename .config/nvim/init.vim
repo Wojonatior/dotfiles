@@ -29,10 +29,11 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-""Colors
+"Colors
   set termguicolors
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   set background=light
@@ -45,12 +46,13 @@ call plug#end()
   set shiftwidth=2
 
 "UI Config
+  set encoding=utf8
   set number
   set cursorline
   set lazyredraw
   set autoindent
   set wrap
-  set guifont=Hack
+  set guifont=Knack\ Regular\ Nerd\ Font\ Complete
   set showmatch "shows matching paren
   filetype indent on "loads indentation based on language
   set showcmd "show last command
@@ -109,6 +111,13 @@ call plug#end()
                     \ 'javascript.jsx',
                     \ ]
 
+"Folding
+  set foldenable "enables folding
+  set foldlevelstart=10 "opens most folded code
+  set foldnestmax=10 "max num of nested folds
+  "Space toggles folds 
+  nnoremap <space> za 
+  set foldmethod=indent "folding is based on indents
 
 "Searching
   set incsearch "searches as each characer is entered
@@ -138,14 +147,6 @@ call plug#end()
     let g:ags_agcontext = 3
     let g:ags_enable_async = 1
     let g:ags_agmaxcount = 2000
-
-"Folding
-  set foldenable "enables folding
-  set foldlevelstart=10 "opens most folded code
-  set foldnestmax=10 "max num of nested folds
-  "Space toggles folds 
-  nnoremap <space> za 
-  set foldmethod=indent "folding is based on indents
 
 "Custom Movements
 

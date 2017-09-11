@@ -11,6 +11,7 @@ phantomjs
 postgresql
 pyenv
 python3
+ripgrep
 sl
 the_silver_searcher
 trash
@@ -28,6 +29,7 @@ font-hack-nerd-font
 google-chrome
 gotomeeting
 iterm2
+keycastr
 magicprefs
 postico
 postman

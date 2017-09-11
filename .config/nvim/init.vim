@@ -62,7 +62,8 @@ call plug#end()
 
 
   "Change the type of split that opens for vimtest
-    let test#strategy = "neovim"
+    let g:test#strategy = "neovim"
+    let g:test#preserve_screen = 1
 
   "Change where splits open
     set splitbelow 
@@ -151,6 +152,7 @@ call plug#end()
 "Custom Movements
 
 "Custom Commands
+  :nnoremap <leader>s :split<CR> :save %:p:h/
   :nnoremap <leader>ev :tabe $MYVIMRC<CR>
   :nnoremap <leader>sv :source $MYVIMRC<CR>
   :nnoremap <leader>nt :NERDTreeToggle<CR>
@@ -170,12 +172,4 @@ call plug#end()
   map Y y$ 
   tnoremap <Esc> <C-\><C-n>
 
-"Launch Config
-"Tmux Config
-"Autogroups
-
-"Backups
-"Stores backup files in /tmp
   set noswapfile
-"Custom Functions
-"Organization

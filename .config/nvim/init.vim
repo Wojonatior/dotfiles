@@ -51,7 +51,7 @@ call plug#end()
   set cursorline
   set lazyredraw
   set autoindent
-  set wrap
+  set nowrap
   set guifont=Knack\ Regular\ Nerd\ Font\ Complete
   set showmatch "shows matching paren
   filetype indent on "loads indentation based on language
@@ -82,11 +82,15 @@ call plug#end()
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
 
+    let g:syntastic_javascript_checkers=['eslint']
+    let g:syntastic_ruby_checkers = ['rubocop']
+
+
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_auto_loc_list = 2
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-    let g:syntastic_javascript_checkers=['eslint']
+
     let g:syntastic_warning_symbol = "🙆"
     let g:syntastic_style_warning_symbol = "🙆"
     let g:syntastic_error_symbol = "🙅"

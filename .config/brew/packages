@@ -15,6 +15,7 @@ ripgrep
 sl
 the_silver_searcher
 trash
+upx
 zsh
 zsh-completions
 
@@ -24,6 +25,7 @@ casks:
 adobe-air
 alfred
 basecamp
+deluge
 discord
 docker
 firefoxnightly

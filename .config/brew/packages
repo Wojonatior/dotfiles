@@ -1,3 +1,4 @@
+carthage
 cask
 coreutils
 diff-so-fancy
@@ -36,6 +37,7 @@ google-chrome
 gotomeeting
 iterm2
 keycastr
+macdown
 magicprefs
 postico
 postman
@@ -44,3 +46,4 @@ sketch
 slack
 spotify
 steam
+the-unarchiver

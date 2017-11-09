@@ -22,7 +22,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'janko-m/vim-test'
 Plug 'jelera/vim-javascript-syntax'
@@ -30,6 +29,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -146,6 +146,11 @@ call plug#end()
     let g:ctrlp_use_caching = 0
   endif
 
+  "ack.vim configuration
+  if executable('ag')
+    let g:ackprg =  'ag --vimgrep'
+  endif
+  nnoremap <Leader>a :Ack!<Space>
 
   "ags configuration
     let g:ags_agexe = 'ag'

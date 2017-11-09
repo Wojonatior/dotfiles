@@ -45,7 +45,6 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 function chpwd() {ls}
 alias git pprint="git log --graph --all --decorate"
-alias hotgulp="coffee -c gulpfile.coffee && gulp"
 alias delet="rm -rf"
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.config/nvim/init.vim'

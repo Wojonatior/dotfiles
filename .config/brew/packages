@@ -6,19 +6,22 @@ emacs
 git
 gnupg
 heroku
-libyaml
 neovim
 openssl@1.1
+perl
 phantomjs
 postgresql
 pyenv
+python
 python3
 ripgrep
+ruby
 sdl2
 sl
 the_silver_searcher
 trash
 upx
+vim
 zsh
 zsh-completions
 
@@ -31,6 +34,7 @@ basecamp
 deluge
 discord
 docker
+eqmac
 firefoxnightly
 font-hack-nerd-font
 google-chrome
@@ -45,5 +49,8 @@ recordit
 sketch
 slack
 spotify
+statusfy
 steam
 the-unarchiver
+visual-studio-code
+xquartz

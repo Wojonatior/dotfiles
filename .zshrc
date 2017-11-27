@@ -33,6 +33,8 @@ source ~/.api_keys
  fi
 
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:~/Library/Android/sdk/platform-tools
+export PATH=$PATH:/usr/local/share/dotnet
 export UPDATE_ZSH_DAYS=1
 COMPLETION_WAITING_DOTS="true"
 
@@ -48,6 +50,7 @@ alias git pprint="git log --graph --all --decorate"
 alias delet="rm -rf"
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.config/nvim/init.vim'
+alias prune="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 
 # Backing up of dotfiles/configuration
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
@@ -72,3 +75,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Run a backup of brew pacakges every time a terminal is loaded
 backbrew
+launchctl setenv PATH $PATH

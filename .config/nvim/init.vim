@@ -58,8 +58,6 @@ call plug#end()
   set showcmd "show last command
   set mouse=a "Allows for mouse scrolling to work correctly
 
-  "Disable the polyglot syntax highlighting for js
-
 
   "Change the type of split that opens for vimtest
     let g:test#strategy = "neovim"

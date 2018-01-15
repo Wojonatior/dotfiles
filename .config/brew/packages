@@ -3,6 +3,7 @@ carthage
 cask
 coreutils
 diff-so-fancy
+elixir
 git
 gnupg
 heroku
@@ -20,6 +21,7 @@ the_silver_searcher
 trash
 upx
 vim
+watchman
 zsh
 zsh-completions
 
@@ -28,12 +30,14 @@ casks:
 1password
 adobe-air
 alfred
+android-studio
 deluge
 discord
 docker
 dotnet
 dotnet-sdk
 eqmac
+fastlane
 firefoxnightly
 font-hack-nerd-font
 google-chrome

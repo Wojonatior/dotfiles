@@ -35,6 +35,7 @@ source ~/.api_keys
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 export PATH=$PATH:/usr/local/share/dotnet
+export PATH="$HOME/.fastlane/bin:$PATH"
 export UPDATE_ZSH_DAYS=1
 COMPLETION_WAITING_DOTS="true"
 

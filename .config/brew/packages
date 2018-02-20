@@ -3,6 +3,7 @@ carthage
 cask
 coreutils
 diff-so-fancy
+docker
 elixir
 git
 gnupg
@@ -30,7 +31,10 @@ casks:
 1password
 adobe-air
 alfred
+amethyst
 android-studio
+bartender
+coconutbattery
 deluge
 discord
 docker
@@ -43,9 +47,9 @@ font-hack-nerd-font
 google-chrome
 gotomeeting
 iterm2
-keycastr
 macdown
 magicprefs
+objectivesharpie
 postico
 postman
 sketch

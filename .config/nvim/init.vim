@@ -11,25 +11,32 @@ if empty(glob("~/.config/nvim/autoload/plug.vim"))
 endif
 
 call plug#begin('~/.config/nvim/bundle/')
+" Looking Pretty
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'editorconfig/editorconfig-vim'
+" Syntax
 Plug 'tpope/vim-eunuch'
 Plug 'rhysd/vim-crystal'
-Plug 'tpope/vim-surround'
+Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
-Plug 'raimondi/delimitmate'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdcommenter'
-Plug 'janko-m/vim-test'
 Plug 'jelera/vim-javascript-syntax'
+" Editor Behavior/Extensions
+Plug 'tpope/vim-surround'
+Plug 'raimondi/delimitmate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'janko-m/vim-test'
+" Files/Searching
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
+Plug 'mileszs/ack.vim'
+" Completion
+Plug 'quramy/tsuquyomi'
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'ryanoasis/vim-devicons'
-Plug 'mileszs/ack.vim'
 
 call plug#end()
 

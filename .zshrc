@@ -52,6 +52,12 @@ alias delet="rm -rf"
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.config/nvim/init.vim'
 alias prune="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+function dotnettest() {
+  dotnet test --filter “$1”
+}
+function nrun {
+  $(npm bin)/$@
+}
 
 # Backing up of dotfiles/configuration
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

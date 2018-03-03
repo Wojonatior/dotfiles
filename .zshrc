@@ -81,5 +81,7 @@ eval $(/usr/libexec/path_helper -s)
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Run a backup of brew pacakges every time a terminal is loaded
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 backbrew
 launchctl setenv PATH $PATH

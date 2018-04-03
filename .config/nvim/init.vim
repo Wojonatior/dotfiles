@@ -1,8 +1,10 @@
 :set nocompatible              " be iMproved, required
 let $XDG_DATA_HOME="~/.config/nvim/autoload"
-
 "Custom Leader
 let mapleader="," "leader is a comma
+
+let g:python_host_prog = '/Users/wojo/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/wojo/.pyenv/versions/neovim3/bin/python'
 
 " Load vim-plug
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
@@ -190,5 +192,3 @@ call plug#end()
 
 "Other Configuration
   "neovim python path configuration
-  let g:python_host_prog = '~/.pyenv/versions/neovim2/bin/python'
-  let g:python3_host_prog = '~/.pyenv/versions/neovim3/bin/python'

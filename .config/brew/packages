@@ -6,10 +6,12 @@ docker
 elixir
 git
 gnupg
-heroku
-libtool
+heroku/brew/heroku
+neofetch
 neovim
+node
 openssl@1.1
+phantomjs
 postgresql
 pyenv-virtualenv
 sdl2
@@ -29,6 +31,7 @@ alfred
 amethyst
 android-studio
 bartender
+deluge
 discord
 disk-inventory-x
 docker

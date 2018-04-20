@@ -3,6 +3,7 @@ cask
 coreutils
 diff-so-fancy
 docker
+e2fsprogs
 elixir
 git
 gnupg
@@ -10,11 +11,13 @@ heroku/brew/heroku
 neofetch
 neovim
 node
+openldap
 openssl@1.1
 phantomjs
 postgresql
 pyenv-virtualenv
 sdl2
+tcl-tk
 the_silver_searcher
 trash
 upx

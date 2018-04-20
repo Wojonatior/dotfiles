@@ -1,12 +1,10 @@
 :set nocompatible              " be iMproved, required
 let $XDG_DATA_HOME="~/.config/nvim/autoload"
-"Custom Leader
-let mapleader="," "leader is a comma
+let mapleader=","
 
 let g:python_host_prog = '/Users/wojo/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/wojo/.pyenv/versions/neovim3/bin/python'
 
-" Load vim-plug
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -48,6 +46,8 @@ call plug#end()
   set background=light
   syntax enable
   colorscheme PaperColor
+  let g:solarized_visibility = "high"
+  let g:solarized_contrast = "high"
 
 "Spaces And Tabs
   set expandtab "Tabs are spaces
@@ -61,6 +61,8 @@ call plug#end()
   set lazyredraw
   set autoindent
   set nowrap
+  set splitbelow 
+  set splitright
   set guifont=Knack\ Regular\ Nerd\ Font\ Complete
   set showmatch "shows matching paren
   filetype indent on "loads indentation based on language
@@ -72,17 +74,12 @@ call plug#end()
     let g:test#strategy = "neovim"
     let g:test#preserve_screen = 1
 
-  "Change where splits open
-    set splitbelow 
-    set splitright
   
   "Airline Config
     let g:airline_powerline_fonts = 1 "adds powerline chars to dict
     let g:airline#extensions#whitespace#mixed_indent_algo = 1
     let g:airline_solarized_normal_green = 1
     let g:airline_theme='papercolor'
-    let g:solarized_visibility = "high"
-    let g:solarized_contrast = "high"
 
   "Syntastic Config
     set statusline+=%#warningmsg#
@@ -108,33 +105,29 @@ call plug#end()
   "Deoplete Config
     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
     let g:deoplete#enable_at_startup = 1
-    if !exists('g:deoplete#omni#input_patterns')
-      let g:deoplete#omni#input_patterns = {}
-    endif
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-  " Use deoplete.
     let g:tern_request_timeout = 1
     let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
-
-    "Add extra filetypes
     let g:tern#filetypes = [
                     \ 'jsx',
                     \ 'javascript.jsx',
                     \ ]
 
+    if !exists('g:deoplete#omni#input_patterns')
+      let g:deoplete#omni#input_patterns = {}
+    endif
+
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
 "Folding
-  set foldenable "enables folding
-  set foldlevelstart=10 "opens most folded code
-  set foldnestmax=10 "max num of nested folds
-  "Space toggles folds 
+  set foldenable 
+  set foldlevelstart=10 
+  set foldnestmax=10 
   nnoremap <space> za 
-  set foldmethod=indent "folding is based on indents
+  set foldmethod=indent 
 
 "Searching
-  set incsearch "searches as each characer is entered
-  set hlsearch "highlights matches
-  "turns off search highlights
+  set incsearch
+  set hlsearch
   nnoremap (<leader><space>) :nohlsearch<CR>
  
   "CtrlP Settings
@@ -143,20 +136,12 @@ call plug#end()
 
   "ag support
   if executable('ag')
-    "use ag over grep
     set grepprg=ag\ --nogroup
-
-    "use ag in ctrlp
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-    "disable ctrlp cahing when ag is in use
     let g:ctrlp_use_caching = 0
-  endif
-
-  "ack.vim configuration
-  if executable('ag')
     let g:ackprg =  'ag --vimgrep'
   endif
+
   nnoremap <Leader>a :Ack!<Space>
 
   "ags configuration
@@ -164,8 +149,6 @@ call plug#end()
     let g:ags_agcontext = 3
     let g:ags_enable_async = 1
     let g:ags_agmaxcount = 2000
-
-"Custom Movements
 
 "Custom Commands
   :nnoremap <leader>s :split<CR> :save %:p:h/
@@ -176,19 +159,13 @@ call plug#end()
   nmap <silent> <leader>t :TestNearest<CR>
   nmap <silent> <leader>T :TestFile<CR>
   nmap <silent> <leader>l :TestLast<CR>
-  "jk is escape
-  "inoremap jk <esc> 
   "Split movement rebinds
     nnoremap <C-J> <C-W>j
     nnoremap <C-K> <C-W>k
     nnoremap <C-L> <C-W>l
     nnoremap <C-H> <C-W>h
 
-  "Capital Y now acts like D and C, where it yanks until end of line
   map Y y$ 
   tnoremap <Esc> <C-\><C-n>
 
   set noswapfile
-
-"Other Configuration
-  "neovim python path configuration

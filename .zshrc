@@ -43,7 +43,7 @@ alias vrc='vim ~/.config/nvim/init.vim'
 alias vim="nvim"
 alias sl="ls"
 
-function chpwd {ls}
+function chpwd() {ls}
 function dotnettest { dotnet test --filter “$1” }
 function nrun { $(npm bin)/$@ }
 function dsf { git diff --no-index --color "$@" | diff-so-fancy }

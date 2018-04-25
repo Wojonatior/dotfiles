@@ -50,7 +50,7 @@ function dsf { git diff --no-index --color "$@" | diff-so-fancy }
 
 function update() {
     echo "updating homebrew packages"
-    backbrew
+    brewup
 
     echo "updating node packages"
     yarn global upgrade --latest

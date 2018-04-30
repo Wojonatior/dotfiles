@@ -8,6 +8,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 export PATH=$PATH:/usr/local/share/dotnet
 export PATH="$HOME/.fastlane/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Must be last path change
 
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -39,6 +40,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias git pprint="git log --graph --all --decorate"
 alias git prune="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
 alias zrc='vim ~/.zshrc'
+alias szrc='source ~/.zshrc'
 alias vrc='vim ~/.config/nvim/init.vim'
 alias vim="nvim"
 alias sl="ls"
@@ -49,26 +51,27 @@ function nrun { $(npm bin)/$@ }
 function dsf { git diff --no-index --color "$@" | diff-so-fancy }
 
 function update() {
-    echo "updating homebrew packages"
+    echo "$fg[cyan]updating homebrew packages...$reset_color"
     brewup
 
-    echo "updating node packages"
+    echo "$fg[cyan]updating node packages...$reset_color"
     yarn global upgrade --latest
 
-    echo "updating vim plugins"
+    echo "$fg[cyan]updating vim plugins...$reset_color"
     vim +PlugUpdate +PlugUpgrade +qa
 
-    echo "updating ruby gems"
+    echo "$fg[cyan]updating ruby gems...$reset_color"
     gem update
     gem cleanup
 
-    echo "upgrade cask packages"
+    echo "$fg[cyan]upgrade cask packages...$reset_color"
     brew cu --all --cleanup -q -y
   }
 
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+. "/usr/local/opt/nvm/nvm.sh"
 
 backbrew
 launchctl setenv PATH $PATH

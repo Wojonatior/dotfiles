@@ -168,4 +168,6 @@ call plug#end()
   map Y y$ 
   tnoremap <Esc> <C-\><C-n>
 
+"Other Config
   set noswapfile
+  autocmd filetype crontab setlocal nobackup nowritebackup

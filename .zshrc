@@ -51,20 +51,20 @@ function nrun { $(npm bin)/$@ }
 function dsf { git diff --no-index --color "$@" | diff-so-fancy }
 
 function update() {
-    echo "$fg[cyan]updating homebrew packages...$reset_color"
+    echo "$fg[cyan]Updating homebrew packages...$reset_color"
     brewup
 
-    echo "$fg[cyan]updating node packages...$reset_color"
+    echo "$fg[cyan]Updating node packages...$reset_color"
     yarn global upgrade --latest
 
-    echo "$fg[cyan]updating vim plugins...$reset_color"
+    echo "$fg[cyan]Updating vim plugins...$reset_color"
     vim +PlugUpdate +PlugUpgrade +qa
 
-    echo "$fg[cyan]updating ruby gems...$reset_color"
+    echo "$fg[cyan]Updating ruby gems...$reset_color"
     gem update
     gem cleanup
 
-    echo "$fg[cyan]upgrade cask packages...$reset_color"
+    echo "$fg[cyan]Upgrade cask packages...$reset_color"
     brew cu --all --cleanup -q -y
   }
 

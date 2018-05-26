@@ -8,9 +8,10 @@ elixir
 git
 gnupg
 heroku/brew/heroku
+mailhog
+mongodb
 neofetch
 neovim
-node
 nvm
 openldap
 openssl@1.1
@@ -24,6 +25,7 @@ trash
 upx
 vim
 watchman
+yarn
 zsh
 zsh-completions
 
@@ -55,4 +57,6 @@ spotify
 steam
 the-unarchiver
 visual-studio-code
+vlc
 vmware-fusion
+wireshark

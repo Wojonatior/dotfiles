@@ -1,5 +1,6 @@
 automake
 cask
+cmake
 coreutils
 diff-so-fancy
 docker
@@ -10,6 +11,7 @@ gnupg
 heroku/brew/heroku
 mailhog
 mongodb
+mysql
 neofetch
 neovim
 nvm
@@ -48,9 +50,11 @@ google-chrome
 gotomeeting
 intellij-idea
 iterm2
+lastpass
 magicprefs
 postico
 postman
+sequel-pro
 sketch
 slack
 spotify

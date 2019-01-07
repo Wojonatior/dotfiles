@@ -2,8 +2,9 @@
 let $XDG_DATA_HOME="~/.config/nvim/autoload"
 let mapleader=","
 
-let g:python_host_prog = '/Users/wojo/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/wojo/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/wojo/.pyenv/versions/new_neovim2/bin/python'
+let g:python3_host_prog = '/Users/wojo/.pyenv/versions/new_neovim3/bin/python'
+
 
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
@@ -30,14 +31,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 " Files/Searching
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
+Plug 'ctrlpvim/ctrlp.vim',{'do': './install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer --racer-completer' }
 Plug 'mileszs/ack.vim'
 " Completion
 Plug 'quramy/tsuquyomi'
 Plug 'vim-syntastic/syntastic'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 call plug#end()
 
@@ -65,9 +66,9 @@ call plug#end()
   set splitbelow 
   set splitright
   set guifont=Knack\ Regular\ Nerd\ Font\ Complete
-  set showmatch "shows matching paren
-  filetype indent on "loads indentation based on language
-  set showcmd "show last command
+  set showmatch
+  filetype indent on
+  set showcmd
   set mouse=a "Allows for mouse scrolling to work correctly
 
 
@@ -77,7 +78,7 @@ call plug#end()
 
   
   "Airline Config
-    let g:airline_powerline_fonts = 1 "adds powerline chars to dict
+    let g:airline_powerline_fonts = 1
     let g:airline#extensions#whitespace#mixed_indent_algo = 1
     let g:airline_solarized_normal_green = 1
     let g:airline_theme='papercolor'

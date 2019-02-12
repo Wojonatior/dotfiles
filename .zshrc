@@ -12,6 +12,7 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # https://github.com/pyenv/pyenv/issues/106
   export PATH="${HOME}/bin:${PATH}"
 export PATH="$PATH:$HOME/.rvm/bin" # Must be last path change
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
 export NVM_DIR="$HOME/.nvm"
 
@@ -36,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 ### Aliases
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias backbrew="brew leaves > ~/.config/brew/packages; echo '\ncasks:\n' >> ~/.config/brew/packages; brew cask list -1 >> ~/.config/brew/packages;"
-alias brewup='brew update; brew upgrade; brew prune; brew doctor'
+alias brewup='brew update; brew upgrade; brew doctor'
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias git pprint="git log --graph --all --decorate"
 alias git prune="git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"

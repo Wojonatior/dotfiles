@@ -14,7 +14,25 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Must be last path change
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
-export NVM_DIR="$HOME/.nvm"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libffi/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/nss/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libxml2/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/icu4c/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/sqlite/lib/pkgconfig"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/readline/lib/pkgconfig"
+
+# Check compinit once a day instead of every launch
+##compinit
+autoload -Uz compinit
+
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+
+compinit -C
+#/compinit
+
 
 ZSH_CUSTOM=$HOME/.zsh_custom
 ZSH_THEME="modified-agnoster"
@@ -29,10 +47,11 @@ source ~/.api_keys
 export EDITOR='vim'
 export HOMEBREW_INSTALL_CLEANUP='1'
 
-
 COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
+#defaults write -g InitialKeyRepeat -int 5 # normal minimum is 15 (225 ms)
+#defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 ### Aliases
 alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -73,10 +92,23 @@ function update() {
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-. "/usr/local/opt/nvm/nvm.sh"
 eval "$(rbenv init -)"
 
 
+##NVM lazyload
+declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+
+load_nvm () {
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+
+for cmd in "${NODE_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
+#/NVM lazyload
+
 backbrew
-p=$(launchctl getenv PATH)
-launchctl setenv PATH $p

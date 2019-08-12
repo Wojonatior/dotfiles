@@ -1,5 +1,5 @@
 :set nocompatible              " be iMproved, required
-let $XDG_DATA_HOME="~/.config/nvim/autoload"
+let $XDG_DATA_HOME="/Users/wojo/.config/nvim/autoload"
 let mapleader=","
 
 let g:python_host_prog = '/Users/wojo/.pyenv/versions/new_neovim2/bin/python'

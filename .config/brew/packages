@@ -15,12 +15,13 @@ gnupg
 haskell-stack
 heroku/brew/heroku
 hub
+jemalloc
 jenv
+libssh2
 mailhog
 mercurial
 mit-scheme
 mkcert
-mongodb
 mono
 mysql@5.7
 neofetch
@@ -28,13 +29,13 @@ neovim
 netcat
 nvm
 openldap
-openssl@1.1
 pipenv
 portmidi
-postgresql@9.6
+postgresql
+postgresql@10
 pyenv-virtualenv
 rbenv
-rust
+rustup-init
 s3cmd
 sdl2
 sdl_image
@@ -67,6 +68,7 @@ discord
 disk-inventory-x
 docker
 dotnet-sdk
+firefox-developer-edition
 firefoxnightly
 flash-player
 font-hack-nerd-font
@@ -78,6 +80,7 @@ iterm2
 java
 lastpass
 magicprefs
+microsoft-teams
 minecraft
 mono-mdk
 monogame
@@ -88,6 +91,7 @@ robo-3t
 sequel-pro
 sketch
 slack
+sonic-pi
 spotify
 steam
 the-unarchiver
@@ -96,5 +100,4 @@ tunnelblick
 twitch
 visual-studio-code
 vlc
-webex-teams
 zeplin

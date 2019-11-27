@@ -7,15 +7,16 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 export PATH=$PATH:/usr/local/share/dotnet
+export PATH=$PATH:~/.cargo/bin
 export PATH="$HOME/.fastlane/bin:$PATH"
 # Subverts pythons shims when using brew
 # https://github.com/pyenv/pyenv/issues/106
   export PATH="${HOME}/bin:${PATH}"
 export PATH="$PATH:$HOME/.rvm/bin" # Must be last path change
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
-
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libffi/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
+export NVM_DIR="$HOME/.nvm"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libffi/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/nss/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libxml2/lib/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/icu4c/lib/pkgconfig"
@@ -93,22 +94,7 @@ function update() {
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(rbenv init -)"
+. "/usr/local/opt/nvm/nvm.sh"
 
-
-##NVM lazyload
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-
-load_nvm () {
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-}
-
-for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
-#/NVM lazyload
 
 backbrew

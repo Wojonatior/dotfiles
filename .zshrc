@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### Aliases
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias backbrew="brew leaves > ~/.config/brew/packages; echo '\ncasks:\n' >> ~/.config/brew/packages; brew cask list -1 >> ~/.config/brew/packages;"
+alias backbrew="brew leaves > ~/.config/brew/packages; echo '\ncasks:\n' >> ~/.config/brew/packages; brew list --cask -1 >> ~/.config/brew/packages;"
 alias brewup='brew update; brew upgrade; brew doctor'
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias git pprint="git log --graph --all --decorate"

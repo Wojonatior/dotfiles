@@ -3,7 +3,6 @@ aws/tap/aws-sam-cli
 awscli
 azure-cli
 cabal-install
-cask
 certbot
 cmake
 coreutils
@@ -11,6 +10,7 @@ diff-so-fancy
 docker
 e2fsprogs
 elixir
+emacs
 figlet
 git
 gnupg
@@ -72,7 +72,6 @@ aerial
 alacritty
 alfred
 amethyst
-bartender
 beardedspice
 coconutbattery
 deluge
@@ -80,7 +79,9 @@ discord
 disk-inventory-x
 docker
 dotnet-sdk
+firefox
 firefox-developer-edition
+firefox-nightly
 firefoxnightly
 flash-player
 font-hack-nerd-font
@@ -98,6 +99,7 @@ middleclick
 minecraft
 mono-mdk
 monogame
+mtmr
 obs
 postico
 postman
@@ -110,6 +112,7 @@ slack
 sonic-pi
 spotify
 steam
+tableplus
 the-unarchiver
 time-out
 tunnelblick

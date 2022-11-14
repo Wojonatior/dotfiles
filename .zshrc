@@ -4,6 +4,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export UPDATE_ZSH_DAYS=1
 
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 export PATH=$PATH:/usr/local/share/dotnet

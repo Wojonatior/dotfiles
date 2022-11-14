@@ -52,6 +52,7 @@ sdl_image
 sdl_mixer
 sdl_ttf
 shellcheck
+terraform
 the_silver_searcher
 trash
 ucl

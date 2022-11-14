@@ -32,14 +32,12 @@ for dump in ~/.zcompdump(N.mh+24); do
   compinit
 done
 
-compinit -C
-#/compinit
-
-
 ZSH_CUSTOM=$HOME/.zsh_custom
 ZSH_THEME="modified-agnoster"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 
-plugins=(git)
+plugins=(git )
 
 setopt correct
 setopt hist_ignore_all_dups
@@ -52,8 +50,6 @@ export HOMEBREW_INSTALL_CLEANUP='1'
 COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
-#defaults write -g InitialKeyRepeat -int 5 # normal minimum is 15 (225 ms)
-#defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 ### Aliases
 alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -95,11 +91,11 @@ function update() {
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(rbenv init -)"
-. "/usr/local/opt/nvm/nvm.sh"
+. "/usr/local/opt/nvm/lazy_nvm.sh"
 
-# place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
+  [[ -a .nvmrc ]] || return
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
 
@@ -118,6 +114,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
 
 backbrew

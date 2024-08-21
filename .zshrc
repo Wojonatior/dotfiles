@@ -3,6 +3,10 @@ export DEFAULT_USER=wojo
 export PYENV_ROOT="$HOME/.pyenv"
 export UPDATE_ZSH_DAYS=1
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +18,8 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # https://github.com/pyenv/pyenv/issues/106
   export PATH="${HOME}/bin:${PATH}"
 export PATH="$PATH:$HOME/.rvm/bin" # Must be last path change
-export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+# Cert no present, disabling for now
+# export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
 export NVM_DIR="$HOME/.nvm"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libffi/lib/pkgconfig"
@@ -43,6 +48,7 @@ setopt correct
 setopt hist_ignore_all_dups
 
 source ~/.api_keys
+source ~/.nvm/nvm.sh
 
 export EDITOR='vim'
 export HOMEBREW_INSTALL_CLEANUP='1'
@@ -88,9 +94,14 @@ function update() {
   }
 
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-eval "$(rbenv init -)"
+if [[ -x "command -v pyenv" ]]; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+if [[ -x "command -v rbenv" ]]; then
+  eval "$(rbenv init -)"
+fi
+# Must be symlinked first `sudo ln -sf ~/.config/nvm/lazy_nvm.sh /usr/local/opt/nvm/lazy_nvm.sh`
 . "/usr/local/opt/nvm/lazy_nvm.sh"
 
 autoload -U add-zsh-hook

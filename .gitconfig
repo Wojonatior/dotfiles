@@ -3,4 +3,11 @@
 	excludesfile = /Users/wojo/.gitignore
 [user]
 	name = Jarek Wojciechowski
-	email = jwojciechowski@midwesttapes.com
+	email = jwojciechowski@midwesttape.com
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
